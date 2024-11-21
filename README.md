@@ -88,6 +88,7 @@ Note that lots of datasets or benchmarks are proposed as a part of individual pa
   - (Human-aware TEB) [Human-Aware Navigation Planner for Diverse Human-Robot Contexts](https://arxiv.org/abs/2106.09971), IROS 2021.
 
 #### Model Predictive Control (MPC)
+感觉偏工程
 - [Model Predictive Contouring Control for Collision Avoidance in Unstructured Dynamic Environments](https://github.com/tud-amr/amr-lmpcc), RA-L 2019.
 - [Anticipatory Navigation in Crowds by Probabilistic Prediction of Pedestrian Future Movements](https://ieeexplore.ieee.org/document/9561022), ICRA 2021.
 - [Collision Avoidance in Tightly-Constrained Environments without Coordination: a Hierarchical Control Approach](https://sites.google.com/berkeley.edu/sg-control), ICRA 2021.
@@ -98,22 +99,28 @@ Note that lots of datasets or benchmarks are proposed as a part of individual pa
 - (DR-MPC) [DR-MPC: Deep Residual Model Predictive Control for Real-world Social Navigation](https://arxiv.org/abs/2410.10646), arXiv 2024.
 
 #### Potential Field & Force-based Methods
+势场方法，非学习类
 - (Social Force) [Social Force Model for Pedestrian Dynamics](https://arxiv.org/abs/cond-mat/9805244), Physics Review 1995.
 - [Robot Companion: A Social-Force based approach with Human Awareness-Navigation in Crowded Environments](https://digital.csic.es/bitstream/10261/96448/4/Robot%20companion.pdf), IROS 2013.
 - [Socially-Aware Reactive Obstacle Avoidance Strategy Based on Limit Cycle](https://ieeexplore.ieee.org/abstract/document/9013059), RA-L 2020.
 
 #### Game Theory
+博弈论，非常新，目前不清楚是什么东西。要补基础知识
 - [Mixed-Strategy Nash Equilibrium for Crowd Navigation](https://arxiv.org/abs/2403.01537), arXiv 2024.
 
 #### Gaussian Mixture Models (GMM)
+混合高斯模型
 - [Socially-Aware Navigation Planner Using Models of Human-Human Interaction](https://rrl.cse.unr.edu/media/documents/2017/sebastian-SAN-ROMAN.pdf), RO-MAN 2017.
 
 #### Topological Braids
+在拓扑学中，辫子（Braids）是一种用来描述和分类三维空间中链接的工具。
+在机器人导航和路径规划的背景下，拓扑辫子可以用来模拟和理解机器人在复杂环境中的路径和交互。这种理论可以帮助机器人理解它们在空间中的位置关系，以及如何避免与其他物体或人在空间中的冲突。
 - [Social Momentum: Design and Evaluation of a Framework for Socially Competent Robot Navigation](https://dl.acm.org/doi/10.1145/3495244), THRI 2022.
 
 ### Learning-based Methods
 
 #### Supervised Learning
+监督学习，模仿学习，模仿专家行为
 - [Deep-Learned Collision Avoidance Policy for Distributed Multi-Agent Navigation](https://arxiv.org/abs/1609.06838), RA-L 2017.
 - [Socially Compliant Navigation through Raw Depth Inputs with Generative Adversarial Imitation Learning](https://arxiv.org/abs/1710.02543), ICRA 2018.
 - [Deep local trajectory replanning and control for robot navigation](https://arxiv.org/abs/1905.05279), ICRA 2019.
@@ -124,6 +131,7 @@ Note that lots of datasets or benchmarks are proposed as a part of individual pa
 
 #### Reinforcement Learning
 - Using detected pedestrian states as input
+直接输入特权信息（行人位置）
   - (CADRL) [Decentralized noncommunicating multiagent collision avoidance with deep reinforcement learning](https://arxiv.org/abs/1609.07845), ICRA 2017.
   - [Socially aware motion planning with deep reinforcement learning](https://arxiv.org/abs/1703.08862), IROS 2017.
   - (LSTM-RL) [Motion Planning Among Dynamic, Decision-Making Agents with Deep Reinforcement Learning](https://arxiv.org/abs/1805.01956), IROS 2018.
@@ -132,12 +140,14 @@ Note that lots of datasets or benchmarks are proposed as a part of individual pa
   - [Decentralized structural-RNN for robot crowd navigation with deep reinforcement learning](https://sites.google.com/illinois.edu/crowdnav-dsrnn/home), ICRA 2021.
   - (DR-MPC) [DR-MPC: Deep Residual Model Predictive Control for Real-world Social Navigation](https://arxiv.org/abs/2410.10646), arXiv 2024.
 - Using raw sensor data as input
+- 输入原始传感器信息（雷达，深度，IMG）
   - [Towards Optimally Decentralized Multi-Robot Collision Avoidance via Deep Reinforcement Learning](https://arxiv.org/abs/1709.10082), ICRA 2018.
   - [Distributed Multi-Robot Collision Avoidance via Deep Reinforcement Learning for Navigation in Complex Scenarios](https://sites.google.com/view/hybridmrca), IJRR 2020.
   - [Learning Local Planners for Human-aware Navigation in Indoor Environments](http://ras.papercept.net/images/temp/IROS/files/0122.pdf), IROS 2020.
   - [Robot Navigation in Constrained Pedestrian Environments using Reinforcement Learning](https://arxiv.org/abs/2010.08600), ICRA 2021.
   - [Towards Multi-Modal Perception-Based Navigation: A Deep Reinforcement Learning Method](https://ieeexplore.ieee.org/document/9372890), RA-L 2021.
 - Combining human trajectory prediction and robot planning
+- 结合行人轨迹预测和导航
   - (RGL) [Relational Graph Learning for Crowd Navigation](https://arxiv.org/abs/1909.13165), IROS 2020.
   - [DenseCAvoid: Real-time Navigation in Dense Crowds using Anticipatory Behaviors](https://arxiv.org/abs/2002.03038), ICRA 2020.
   - [Socially Aware Crowd Navigation with Multimodal Pedestrian Trajectory Prediction for Autonomous Vehicles](https://arxiv.org/abs/2011.11191), ITSC 2020.
@@ -147,6 +157,7 @@ Note that lots of datasets or benchmarks are proposed as a part of individual pa
   - [Intention Aware Robot Crowd Navigation with Attention-Based Interaction Graph](https://sites.google.com/view/intention-aware-crowdnav/home), ICRA 2023.
   - [Stranger Danger! Identifying and Avoiding Unpredictable Pedestrians in RL-based Social Robot Navigation](https://people.eecs.berkeley.edu/~prabal/pubs/papers/pohland24stranger.pdf), arXiv 2024. 
 - Constrained crowd navigation with both humans and obstacles
+- 在有静态障碍物的环境中
   - [Robot Navigation in Crowded Environments Using Deep Reinforcement Learning](https://ras.papercept.net/images/temp/IROS/files/0386.pdf), IROS 2020. 
   - DenseCAvoid, ICRA 2020.
   - Robot Navigation in Constrained Pedestrian Environments using Reinforcement Learning, ICRA 2021.
@@ -154,12 +165,14 @@ Note that lots of datasets or benchmarks are proposed as a part of individual pa
   - [DRL-VO: Learning to Navigate Through Crowded Dynamic Scenes Using Velocity Obstacles](https://github.com/TempleRAIL/drl_vo_nav), T-RO 2023.
   - [Sample-Efficient Learning-Based Dynamic Environment Navigation With Transferring Experience From Optimization-Based Planner](https://ieeexplore.ieee.org/document/10552894), RA-L 2024.
 - Reward function design
+- 改奖励函数
   - [Human-Inspired Multi-Agent Navigation using Knowledge Distillation](https://github.com/xupei0610/KDMA), IROS 2021.
   - [DWA-RL: Dynamically Feasible Deep Reinforcement Learning Policy for Robot Navigation among Mobile Obstacles](https://ieeexplore.ieee.org/document/9561462), ICRA 2021.
   - [DRL-VO](https://github.com/TempleRAIL/drl_vo_nav), T-RO 2023.
   - [Intention Aware Robot Crowd Navigation with Attention-Based Interaction Graph](https://arxiv.org/pdf/2203.01821), ICRA 2023.
 
 #### Foundation Models for Social Navigation
+比较前沿的，和大模型、VLN结合
 - [SRLM: Human-in-Loop Interactive Social Robot Navigation with Large Language Model and Deep Reinforcement Learning](https://arxiv.org/abs/2403.15648), arXiv 2024.
 - [Socially Aware Robot Navigation through Scoring Using Vision-Language Models](https://arxiv.org/abs/2404.00210), arXiv 2024.
 - [GSON: A Group-based Social Navigation Framework with Large Multimodal Model](https://arxiv.org/pdf/2409.18084), arXiv 2024.
